@@ -1,9 +1,19 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 import ShareButton from '@/components/ShareButton';
+import ShareBar from '@/components/ShareBar';
 
 function ArticlePreview() {
+  const [isShareBarOpen, setIsShareBarOpen] = useState(false);
+
+  function handleShareBarToggle() {
+    setIsShareBarOpen((prevState) => !prevState);
+  }
+
   return (
-    <article className="grid grid-cols-1 grid-rows-[200px_auto] w-[327px] rounded-[10px] bg-white shadow-[0px_40px_40px_-10px_rgba(201,213,225,0.50)]">
+    <article className="relative grid grid-cols-1 grid-rows-[200px_auto] w-[327px] rounded-[10px] bg-white shadow-[0px_40px_40px_-10px_rgba(201,213,225,0.50)]">
       <figure className="relative h-[200px]">
         <Image
           src="/images/drawers.jpg"
@@ -38,8 +48,16 @@ function ArticlePreview() {
               <p className="text-date">28 Jun 2020</p>
             </div>
           </div>
-          <ShareButton />
+          <ShareButton
+            isShareBarOpen={isShareBarOpen}
+            onShareBarToggle={handleShareBarToggle}
+          />
         </div>
+        {isShareBarOpen && (
+          <div className="absolute left-0 bottom-0">
+            <ShareBar />
+          </div>
+        )}
       </div>
     </article>
   );
