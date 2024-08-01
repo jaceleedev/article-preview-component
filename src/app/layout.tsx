@@ -21,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable}`}>{children}</body>
+      <body
+        className={`w-screen h-screen bg-light-grayish-blue ${manrope.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
