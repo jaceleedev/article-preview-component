@@ -4,52 +4,22 @@
 
 @layer utilities {
   .text-heading {
-    font-family: var(--font-manrope);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.2px;
-    color: #48556a;
+    @apply font-manrope text-[16px] not-italic font-bold leading-normal tracking-[0.2px] text-dark-grayish-blue md:text-[20px] md:leading-[1.4] md:tracking-[0.25px];
   }
 
   .text-body {
-    font-family: var(--font-manrope);
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0.122px;
-    color: #6e8098;
+    @apply font-manrope text-[13px] not-italic font-medium leading-5 tracking-[0.122px] text-desaturated-dark-blue;
   }
 
   .text-author {
-    font-family: var(--font-manrope);
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0.122px;
-    color: #48556a;
+    @apply font-manrope text-[13px] not-italic font-bold leading-5 tracking-[0.122px] text-dark-grayish-blue;
   }
 
   .text-date {
-    font-family: var(--font-manrope);
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0.122px;
-    color: #9daec2;
+    @apply font-manrope text-[13px] not-italic font-medium leading-5 tracking-[0.122px] text-grayish-blue;
   }
 
   .text-action {
-    font-family: var(--font-manrope);
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 5px;
-    color: #9daec2;
+    @apply font-manrope text-[13px] not-italic font-medium leading-5 tracking-[5px] text-grayish-blue;
   }
 }
