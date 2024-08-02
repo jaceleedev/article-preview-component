@@ -20,7 +20,7 @@ function ArticlePreview() {
           alt="Stylish drawers in a room setting"
           fill
           priority
-          className="object-cover object-[center_25%] rounded-t-[10px] md:rounded-tr-none md:rounded-bl-[10px]"
+          className="object-cover object-[center_25%] rounded-t-[10px] md:rounded-tr-none md:rounded-bl-[10px] md:object-left"
         />
       </header>
       <div className="pt-9 px-8 pb-5 md:px-10 md:py-8">
